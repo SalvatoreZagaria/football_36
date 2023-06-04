@@ -35,12 +35,16 @@ def get_neo4j_password():
 
 
 def get_minimum_player_value():
-    return os.getenv('MINIMUM_PLAYER_VALUE', 20)
+    return int(os.getenv('MINIMUM_PLAYER_VALUE', 50))
 
 
-def get_random_players_n_to_choose_from():
-    return os.getenv('RANDOM_PLAYERS_N', 100)
+def get_minimum_player_value_with_leagues_filter():
+    return int(os.getenv('MINIMUM_PLAYER_VALUE_LEAGUES_FILTER', 20))
+
+
+def players_selection_limit():
+    return int(os.getenv('PLAYERS_SELECTION_LIMIT', 300))
 
 
 def get_maximum_path_length():
-    return os.getenv('MAXIMUM_PATH_LENGTH', 6)
+    return int(os.getenv('MAXIMUM_PATH_LENGTH', 6))

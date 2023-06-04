@@ -13,7 +13,7 @@ class TeamMilitancy(db.Model):
     __table_args__ = (
         db.PrimaryKeyConstraint('team_id', 'league_id', 'year'),
     )
-    team_id = db.db.Column(db.Integer, db.ForeignKey('team.id'))
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     league_id = db.Column(db.Integer, db.ForeignKey('league.id'))
     year = db.Column(db.Integer)
 
@@ -49,7 +49,6 @@ class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     surname = db.Column(db.String)
-    position = db.Column(db.String)
     img = db.Column(db.LargeBinary)
     img_url = db.Column(db.String)
     value = db.Column(db.Float, default=0)
